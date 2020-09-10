@@ -6,7 +6,6 @@ with open("README.md", "r") as fh:
 setuptools.setup(
      name='whetherman',
      version='0.1',
-     scripts=['whetherman'] ,
      author="Tom Steinberg",
      description="CLI Weather Forecast",
      long_description=long_description,
@@ -17,4 +16,6 @@ setuptools.setup(
          "Programming Language :: Python :: 3",
          "Operating System :: OS Independent",
      ],
+     py_modules=['whetherman'],
+     entry_points={'console_scripts': ['whetherman = whetherman:main']},
  )
