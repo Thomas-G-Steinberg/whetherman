@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='whetherman',
-     version='0.1',
+     version='0.1.1',
      author="Tom Steinberg",
      description="CLI Weather Forecast",
      long_description=long_description,

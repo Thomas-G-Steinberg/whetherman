@@ -153,11 +153,17 @@ def set_config_result_num(config, num):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-C', '--config', default=DEFAULT_CONF)
-    parser.add_argument('-H', '--hourly', action='store_true')
+    parser.add_argument(
+        '-C', '--config', default=DEFAULT_CONF,
+         help='Configuration file to use; defaults to ~/.whetherman.conf'
+    )
+    parser.add_argument(
+        '-H', '--hourly', action='store_true',
+         help='Display hourly forecasts rather than AM/PM summaries'
+    )
     parser.add_argument(
         '-L','--set-location', metavar='L', type=str, nargs=2,
-        help='latitude/longitude', required=False
+        help='set location based on latitude/longitude', required=False
     )
     parser.add_argument(
         '-N','--set-number', metavar='N', type=int, nargs=1,
